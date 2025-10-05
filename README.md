@@ -23,14 +23,22 @@ The configuration is designed to be simple, clean, and easily maintainable.
 
 ## Installation
 
-### 1\. Clone the repository
+### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/vaultwarden-k3s
+git clone https://github.com/simon-verbois/vaultwarden-k3s
 cd vaultwarden-k3s
 ```
 
-### 2\. Customize the configuration
+### 2. Copy the files
+
+Make your own copy of the templates files with this command.
+
+```bash
+for file in *.yaml.template; do mv "$file" "${file%.template}"; done
+```
+
+### 3. Customize the configuration
 
 You **must** adapt some files to your own environment before applying them.
 
@@ -113,7 +121,7 @@ You **must** adapt some files to your own environment before applying them.
         - "vault.your-domain.com" # <-- EDIT THIS
     ```
 
-### 3\. Deploy Vaultwarden
+### 4. Deploy Vaultwarden
 
 Apply all YAML manifests in a single command from the project root:
 
@@ -123,7 +131,7 @@ kubectl apply -f .
 
 This will create the `vaultwarden` namespace and all the necessary resources: PVC, Secret, ConfigMap, Deployment, Service, and Ingress.
 
-### 4\. Access Vaultwarden
+### 5. Access Vaultwarden
 
 After a few moments, the container image will be downloaded and the pod will start. You can monitor the status with:
 
