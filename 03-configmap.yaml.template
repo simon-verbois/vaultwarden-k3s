@@ -1,0 +1,16 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: vaultwarden-configmap
+  namespace: vaultwarden
+data:
+  SIGNUPS_ALLOWED: "false"
+  SMTP_HOST: "your.smtp.server"
+  SMTP_FROM: "Vaultwarden <no-reply@your-domain.com>"
+  SMTP_PORT: "25"
+  SMTP_SECURITY: "off"
+  DOMAIN: "https://vault.your-domain.com"
+  TZ: "Europe/Paris"
+  PUSH_ENABLED: "true"
+  PUSH_RELAY_BASE_URI: "https://push.bitwarden.eu"

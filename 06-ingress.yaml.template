@@ -1,0 +1,23 @@
+---
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: vaultwarden-ingress
+  namespace: vaultwarden
+  annotations:
+    traefik.ingress.kubernetes.io/router.tls.certresolver: your-certresolver-name
+spec:
+  rules:
+  - host: "vault.your-domain.com"
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: vaultwarden-service
+            port:
+              name: http
+  tls:
+  - hosts:
+    - "vault.your-domain.com"
