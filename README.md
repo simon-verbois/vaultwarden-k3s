@@ -11,7 +11,7 @@ The configuration is designed to separate application configuration, metadata, a
 1.  A working Kubernetes cluster (e.g., K3s, k0s, RKE2).
 2.  The `kubectl` command-line tool configured to access your cluster.
 3.  An **Ingress Controller** installed in the cluster (e.g., Traefik, NGINX Ingress).
-4.  A **StorageClass** configured to dynamically provision storage volumes. K3s includes `local-path-provisioner`, which works for this configuration.
+4.  A **StorageClass** configured to dynamically provision storage volumes.
 5.  An SMTP server for sending invitation emails and other notifications.
 
 <br>
