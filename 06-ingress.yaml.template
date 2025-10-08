@@ -5,10 +5,10 @@ metadata:
   name: vaultwarden-ingress
   namespace: vaultwarden
   annotations:
-    traefik.ingress.kubernetes.io/router.tls.certresolver: your-certresolver-name
+    traefik.ingress.kubernetes.io/router.tls.certresolver: your-certresolver-name # <-- Add your TLS resolver name
 spec:
   rules:
-  - host: "vault.your-domain.com"
+  - host: "vault.your-domain.com" # <-- Add you own domain
     http:
       paths:
       - path: /
@@ -20,4 +20,4 @@ spec:
               name: http
   tls:
   - hosts:
-    - "vault.your-domain.com"
+    - "vault.your-domain.com" # <-- Add you own domain

@@ -6,11 +6,11 @@ metadata:
   namespace: vaultwarden
 data:
   SIGNUPS_ALLOWED: "false"
-  SMTP_HOST: "your.smtp.server"
-  SMTP_FROM: "Vaultwarden <no-reply@your-domain.com>"
+  SMTP_HOST: "your.smtp.server" # <-- Add your own SMTP server fqdn/address
+  SMTP_FROM: "Vaultwarden <no-reply@your-domain.com>" # <-- Add your own email sender
   SMTP_PORT: "25"
   SMTP_SECURITY: "off"
-  DOMAIN: "https://vault.your-domain.com"
-  TZ: "Europe/Paris"
+  DOMAIN: "https://vault.your-domain.com" # <-- Add your own external domain here
+  TZ: "Europe/Paris" # <-- Add your TZ
   PUSH_ENABLED: "true"
   PUSH_RELAY_BASE_URI: "https://push.bitwarden.eu"
