@@ -1,4 +1,4 @@
-# Deploying Vaultwarden on K3s/Kubernetes
+# Deploying Vaultwarden on Kubernetes
 
 This repository contains a set of Kubernetes manifests for deploying [Vaultwarden](https://github.com/dani-garcia/vaultwarden), a lightweight, unofficial Bitwarden server written in Rust. This configuration is tested on a single-node MicroK8s cluster but should be adaptable to any Kubernetes environment.
 
