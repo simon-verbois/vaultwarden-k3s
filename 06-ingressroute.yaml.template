@@ -1,0 +1,31 @@
+# To use this IngressRoute, please refer to: https://github.com/simon-verbois/microk8s-config-traefik/tree/main
+---
+apiVersion: traefik.io/v1alpha1
+kind: IngressRoute
+metadata:
+  name: vaultwarden-ingressroute
+  namespace: vaultwarden
+spec:
+  entryPoints:
+    - websecure
+  routes:
+    - match: Host(`vault.example.org`)
+      kind: Rule
+      services:
+        - name: vaultwarden-service
+          port: http
+      middlewares:
+        - name: coraza-waf
+          namespace: traefik
+        - name: security-headers
+          namespace: traefik
+        - name: rate-limit
+          namespace: traefik
+
+  tls:
+    certResolver: ovhresolver
+    domains:
+      - main: "vault.example.org"
+    options:
+      name: tls-profile
+      namespace: traefik
