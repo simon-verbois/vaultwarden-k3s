@@ -1,3 +1,4 @@
+# This IngressRoute is more secure than the default ingress
 # To use this IngressRoute, please refer to: https://github.com/simon-verbois/microk8s-config-traefik/tree/main
 ---
 apiVersion: traefik.io/v1alpha1
@@ -21,7 +22,6 @@ spec:
           namespace: traefik
         - name: rate-limit
           namespace: traefik
-
   tls:
     certResolver: ovhresolver
     domains:
@@ -29,3 +29,29 @@ spec:
     options:
       name: tls-profile
       namespace: traefik
+
+
+# Basic ingress
+#---
+#apiVersion: networking.k8s.io/v1
+#kind: Ingress
+#metadata:
+#  name: vault-ingress
+#  namespace: vault
+#  annotations:
+#    traefik.ingress.kubernetes.io/router.tls.certresolver: your-ingress-certresolver-name # <-- Add your TLS resolver name
+#spec:
+#  rules:
+#  - host: "vault.example.org" # <-- Add you own domain
+#    http:
+#      paths:
+#      - path: /
+#        pathType: Prefix
+#        backend:
+#          service:
+#            name: vault-service
+#            port:
+#              name: http
+#  tls:
+#  - hosts:
+#    - "vault.example.org" # <-- Add you own domain
