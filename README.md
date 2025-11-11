@@ -1,3 +1,11 @@
+<p align="center">
+  <a href="https://github.com/simon-verbois/vaultwarden-k8s/graphs/traffic"><img src="https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2Fsimon-verbois%2Fvaultwarden-k8s&label=Visitors&countColor=26A65B&style=flat" alt="Visitor Count" height="28"/></a>
+  <a href="https://github.com/simon-verbois/vaultwarden-k8s/commits/main"><img src="https://img.shields.io/github/last-commit/simon-verbois/vaultwarden-k8s?style=flat" alt="GitHub Last Commit" height="28"/></a>
+  <a href="https://github.com/simon-verbois/vaultwarden-k8s/stargazers"><img src="https://img.shields.io/github/stars/simon-verbois/vaultwarden-k8s?style=flat&color=yellow" alt="GitHub Stars" height="28"/></a>
+  <a href="https://github.com/simon-verbois/vaultwarden-k8s/issues"><img src="https://img.shields.io/github/issues/simon-verbois/vaultwarden-k8s?style=flat&color=red" alt="GitHub Issues" height="28"/></a>
+  <a href="https://github.com/simon-verbois/vaultwarden-k8s/pulls"><img src="https://img.shields.io/github/issues-pr/simon-verbois/vaultwarden-k8s?style=flat&color=blue" alt="GitHub Pull Requests" height="28"/></a>
+</p>
+
 # Vaultwarden Kubernetes Deployment
 
 This repository provides Kubernetes manifests to deploy [Vaultwarden](https://github.com/dani-garcia/vaultwarden), a lightweight Bitwarden-compatible server. Tested on MicroK8s, but adaptable to any Kubernetes cluster.
